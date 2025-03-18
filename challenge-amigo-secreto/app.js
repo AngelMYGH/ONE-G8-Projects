@@ -20,6 +20,13 @@ function agregarAmigo() {
     inputNombre.value = '';
 }
 
+// Activar la función al presionar Enter
+inputNombre.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        agregarAmigo();
+    }
+});
+
 // Función para actualizar la lista de nombres en la interfaz
 function actualizarLista() {
     listaNombres.innerHTML = '';
